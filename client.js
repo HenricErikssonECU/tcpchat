@@ -40,7 +40,7 @@ async function serverPort() {
 
 const runClient = async () => {
 
-    let username = await userName().catch(err => { console.log(err); });
+    let username = await userName();
     let portnumber = await serverPort();
     connectionFunc(username, portnumber);
 }
